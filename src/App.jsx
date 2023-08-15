@@ -8,6 +8,7 @@ import "./index.css"
 import { useEffect } from "react"
 import { useState } from "react"
 import Loader from "./components/Loader/Loader"
+import { AnimatePresence } from "framer-motion"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -20,7 +21,9 @@ function App() {
 
   return (
     <>
+    <AnimatePresence mode="wait">
       {isLoading && <Loader />}
+    </AnimatePresence>
       <Navbar />
 
       <Routes>

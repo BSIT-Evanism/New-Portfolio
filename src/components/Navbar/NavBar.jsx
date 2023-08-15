@@ -15,6 +15,8 @@ function Navbar() {
 
   const size = isHovered ? 30 : 1;
 
+  const devtitle = "made with love by evan solanoy"
+
   const links = [
     { id: 1, title: "Home", dir: "/" },
     { id: 2, title: "About", dir: "/about" },
@@ -28,7 +30,7 @@ function Navbar() {
       <Cursor size={size} />
       <nav onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <NavLink className={styles.homelink} to="/">
-          <h1 className={styles.title}>Title and Logo</h1>
+          <marquee className={styles.title}>{devtitle}</marquee>
         </NavLink>
         <ul>
           {links.map((link) => (
@@ -37,6 +39,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
+          <marquee className={styles.title}>{devtitle}</marquee>
       </nav>
     </>
 

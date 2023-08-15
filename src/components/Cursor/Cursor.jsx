@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Cursor({ size }) {
 
   const { x, y } = useMousePosition();
-  const sizes = 50;
+  const sizes = 30;
 
 
   return (
